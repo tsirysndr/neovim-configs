@@ -1,3 +1,4 @@
+
 return {
 	-- the colorscheme should be available when starting Neovim
 	{
@@ -30,7 +31,7 @@ return {
 		"dstein64/vim-startuptime",
 		-- lazy-load on a command
 		cmd = "StartupTime",
-		-- init is called during startup. Configuration for vim plugins typically should be set in an init function
+ 	-- init is called during startup. Configuration for vim plugins typically should be set in an init function
 		init = function()
 			vim.g.startuptime_tries = 10
 		end,
@@ -44,9 +45,10 @@ return {
 		-- dependencies are always lazy-loaded unless specified otherwise
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
+              		"hrsh7th/cmp-buffer",
 		},
-		config = function()
+		enabled = true,
+	      config = function()
 			-- ...
 		end,
 	},
@@ -75,7 +77,7 @@ return {
 	},
 
 	-- local plugins need to be explicitly configured with dir
-	{ dir = "~/projects/secret.nvim" },
+	-- { dir = "~/projects/secret.nvim" },
 
 	-- you can use a custom url to fetch a plugin
 	{ url = "git@github.com:folke/noice.nvim.git" },
